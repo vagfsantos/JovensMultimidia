@@ -1,3 +1,12 @@
+//Variables, extends and mixins
+@import "system/vars";
+@import "system/mixins";
+
+// Init config, reset css and grid system
 @import "config/normalize";
 @import "config/reset";
 @import "config/grid";
+
+// Layout
+@import "layout/header";
+@import "layout/banners";

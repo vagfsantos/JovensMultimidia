@@ -1,22 +1,13 @@
 <?php 
 	get_header();
+	require_once 'components/menu.php';
 ?>
 
-<?php
-	if( have_posts() ):
-		while( have_posts() ): the_post(); ?>
-	
-			<div class="col-sm-12">
-				<?php the_title(); ?>
-			</div>
-
-			<div class="col-sm-6">
-				<?php the_content(); ?>
-			</div>
-	
-<?php 	endwhile;
-	endif;
-?>
+<main id="jm_main" class="container">
+	<?php
+		require_once 'components/banner.php';
+	?>
+</main>
 
 
 

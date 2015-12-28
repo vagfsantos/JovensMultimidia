@@ -1,6 +1,17 @@
 module.exports = function(grunt){
 
 	grunt.initConfig({
+
+		watch: {
+		  src: {
+		    files: ['css/**/*.scss'],
+		    tasks: ['sass'],
+		    options: {
+		      spawn: false,
+		    },
+		  },
+		},
+
 		// compilar SASS
 		sass: {
 			dist:{
@@ -12,7 +23,7 @@ module.exports = function(grunt){
 
 
 	grunt.loadNpmTasks("grunt-contrib-sass");
+	grunt.loadNpmTasks("grunt-contrib-watch");
 
-	grunt.registerTask('compilar', ['sass']);
-
+	grunt.registerTask('default', ['watch']);
 }

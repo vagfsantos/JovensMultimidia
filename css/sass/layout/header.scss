@@ -1,0 +1,54 @@
+#jm_header{
+	background: $color_light;
+	margin-bottom: 1em;
+	border-bottom: 2px solid $color_gray;
+
+	#jm_logo{
+		padding: 1.5em 0;
+	}
+}
+
+// NavBar List
+.nav_primary{
+	#jm_navbar{
+
+		.menu-primary-menu-links-container{
+			float: right;
+		}
+
+		li{
+			float: left;
+			padding-top: 2em;
+			a{
+				padding: 2em 1.5em;
+				color: $color_dark;
+				background: $color_light;
+				text-decoration: none;
+				@include animation(.2s, ease-in);
+
+				&:hover{
+					background: $color_gray;
+					border-bottom: 5px solid red;
+				}
+			}// end 'a';
+		}// end 'li';
+	}
+
+
+	#jm_search {
+		padding: 1em 0;
+		button{
+			background: transparent;
+			float: right;
+			@include animation(.2s, ease);
+
+			&:hover{
+				transform: scale(1.2);
+			}
+
+			img{
+				height: 45px;
+			}
+		}
+	}
+}

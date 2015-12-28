@@ -1,0 +1,7 @@
+%fontFamily{
+	font-family: 'Oxygen', sans-serif;
+}
+
+@mixin animation($time, $mode){
+	transition: $time $mode;
+}

@@ -1,0 +1,97 @@
+#jm_banners{
+	
+	a{
+		text-decoration: none;
+		color: $color_light;
+	}
+	
+	// FIRST BANNER
+	#banner_primary{
+		figure{
+			position: relative;
+			overflow: hidden;
+
+			img{
+				@include animation(.5s, ease-in-out);
+			}
+
+			&:hover{
+				figcaption{
+					border-top: 5px solid $color_primary;
+					h1{
+						text-shadow: 0 0 10px $color_light;
+					}
+				}
+
+				img{
+					transform: scale(1.04);
+				}
+			}
+		}// end figure
+
+		figcaption{
+			background: rgba($color_dark, .8);
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			padding: 3em;
+			text-align: right;
+			@include animation(.2s, ease-in-out);
+			
+			h1{
+				font-weight: 700;
+			}
+
+			p{
+				font-size: 1.2em;
+			}
+		} // end figcaption
+	}// end banner primary
+
+
+	.banner_post{
+		height: 232.5px;
+		
+		figure{
+			position: relative;
+			overflow: hidden;
+			height: 232.5px;
+
+			img{
+				@include animation(.5s, ease-in-out);
+			}
+
+			&:hover{
+				figcaption{
+					border-top: 5px solid $color_primary;
+					h1{
+						text-shadow: 0 0 10px $color_light;
+					}
+				}
+
+				img{
+					transform: scale(1.04);
+				}
+			}
+		}// end figure
+
+		figcaption{
+			background: rgba($color_dark, .8);
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			padding: .2em 2em;
+			text-align: right;
+			@include animation(.2s, ease-in-out);
+			
+			h1{
+				font-weight: 700;
+			}
+
+			p{
+				font-size: 1.2em;
+			}
+		}
+	}
+
+} // end #jm_banners

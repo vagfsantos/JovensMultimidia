@@ -367,6 +367,12 @@ th {
 html {
   font-size: 100%; }
 
+img {
+  max-width: 100%; }
+
+body {
+  @extendfontFamily; }
+
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -2037,5 +2043,89 @@ select[multiple].input-lg {
 @media print {
   .hidden-print {
     display: none !important; } }
+#jm_header {
+  background: #ffffff;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #F1F1F1; }
+  #jm_header #jm_logo {
+    padding: 1.5em 0; }
+
+.nav_primary #jm_navbar .menu-primary-menu-links-container {
+  float: right; }
+.nav_primary #jm_navbar li {
+  float: left;
+  padding-top: 2em; }
+  .nav_primary #jm_navbar li a {
+    padding: 2em 1.5em;
+    color: #000000;
+    background: #ffffff;
+    text-decoration: none;
+    transition: 0.2s ease-in; }
+    .nav_primary #jm_navbar li a:hover {
+      background: #F1F1F1;
+      border-bottom: 5px solid red; }
+.nav_primary #jm_search {
+  padding: 1em 0; }
+  .nav_primary #jm_search button {
+    background: transparent;
+    float: right;
+    transition: 0.2s ease; }
+    .nav_primary #jm_search button:hover {
+      transform: scale(1.2); }
+    .nav_primary #jm_search button img {
+      height: 45px; }
+
+#jm_banners a {
+  text-decoration: none;
+  color: #ffffff; }
+#jm_banners #banner_primary figure {
+  position: relative;
+  overflow: hidden; }
+  #jm_banners #banner_primary figure img {
+    transition: 0.5s ease-in-out; }
+  #jm_banners #banner_primary figure:hover figcaption {
+    border-top: 5px solid #EC1C24; }
+    #jm_banners #banner_primary figure:hover figcaption h1 {
+      text-shadow: 0 0 10px #ffffff; }
+  #jm_banners #banner_primary figure:hover img {
+    transform: scale(1.04); }
+#jm_banners #banner_primary figcaption {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 3em;
+  text-align: right;
+  transition: 0.2s ease-in-out; }
+  #jm_banners #banner_primary figcaption h1 {
+    font-weight: 700; }
+  #jm_banners #banner_primary figcaption p {
+    font-size: 1.2em; }
+#jm_banners .banner_post {
+  height: 232.5px; }
+  #jm_banners .banner_post figure {
+    position: relative;
+    overflow: hidden;
+    height: 232.5px; }
+    #jm_banners .banner_post figure img {
+      transition: 0.5s ease-in-out; }
+    #jm_banners .banner_post figure:hover figcaption {
+      border-top: 5px solid #EC1C24; }
+      #jm_banners .banner_post figure:hover figcaption h1 {
+        text-shadow: 0 0 10px #ffffff; }
+    #jm_banners .banner_post figure:hover img {
+      transform: scale(1.04); }
+  #jm_banners .banner_post figcaption {
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: .2em 2em;
+    text-align: right;
+    transition: 0.2s ease-in-out; }
+    #jm_banners .banner_post figcaption h1 {
+      font-weight: 700; }
+    #jm_banners .banner_post figcaption p {
+      font-size: 1.2em; }
 
 /*# sourceMappingURL=main.css.map */
