@@ -1,0 +1,55 @@
+#jm_footer{
+	background: $color_dark;
+	padding: 3em 0;
+
+	// Menu social network
+	#jm_socialnetworkfooter{
+		text-align: center;
+		padding: 2em 0;
+
+		li{
+			@include animation(.1s, ease-in);
+			&:hover {
+				transform: translateY(-10px);
+				.icon{
+					fill: $color_primary;
+				}
+			}
+		}
+	}
+
+
+	#jm_navfooter{
+		ul{
+			position: relative;
+			width: 65%;
+			margin: auto;
+		}	
+	
+		li{
+			float: left;
+			text-align: center;
+			padding: 2em 2em;
+		}
+
+		a{
+			font-size: 1.2em;
+			color: $color_gray_dark;
+		}
+	}
+
+
+	#jm_sign{
+		p{
+			text-align: center;
+			font-size: 1.2em;
+			color: $color_gray_dark;
+			padding: 1em 0;
+		}
+	}
+
+
+	.icon{
+		@include animation(.2s, ease);
+	}
+}

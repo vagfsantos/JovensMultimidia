@@ -33,6 +33,13 @@
 			)
 		);
 
+	// Registering nav footer
+	register_nav_menus(
+		array(
+			"footer" => "Footer Menu"
+			)
+		);
+
 	// allow thumbnails support
 	add_theme_support( 'post-thumbnails' ); 
 
