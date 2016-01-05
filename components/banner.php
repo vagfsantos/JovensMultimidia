@@ -1,6 +1,9 @@
 <section id="jm_banners" class="row">
 	<div class="container">
 		<?php
+		$currentPage = ( get_query_var("paged") ) ? get_query_var("paged") : 1;
+		$numPosts = array("posts_per_page" => 9, "paged" => $currentPage);
+		query_posts($numPosts);
 
 		if( have_posts() ):?>
 			
