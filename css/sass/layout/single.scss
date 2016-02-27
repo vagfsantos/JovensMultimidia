@@ -13,18 +13,13 @@
 			bottom: 0;
 			color: $color_primary;
 		}
-
-		img{
-			box-shadow: -15px 15px 0px $color_primary;
-		}
 	}
 
 	.body_post_single{
 		p{
 			font-size: 1.6em;
-			margin-bottom: 1em;
+			margin-bottom: 2em;
 			color: $color_gray_dark;
 		}
 	}
-
 }

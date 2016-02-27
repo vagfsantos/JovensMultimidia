@@ -371,9 +371,6 @@ img {
   max-width: 100%;
   height: auto; }
 
-body {
-  @extendfontFamily; }
-
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -2044,36 +2041,58 @@ select[multiple].input-lg {
 @media print {
   .hidden-print {
     display: none !important; } }
-#jm_header {
-  background: #ffffff;
-  padding-bottom: .2em; }
-  #jm_header #jm_logo {
-    padding: 1.5em 0; }
+html, body {
+  font-family: 'Oxygen', sans-serif; }
 
-.nav_primary #jm_navbar .menu-primary-menu-links-container {
-  float: right; }
-.nav_primary #jm_navbar li {
-  float: left;
-  padding-top: 2em; }
-  .nav_primary #jm_navbar li a {
-    padding: 2em 1.5em;
-    color: #000000;
-    background: #ffffff;
-    text-decoration: none;
-    transition: 0.2s ease-in; }
-    .nav_primary #jm_navbar li a:hover {
-      background: #F1F1F1;
-      border-bottom: 5px solid red; }
+#jm_header {
+  background: #ffffff; }
+  #jm_header #jm_logo {
+    position: relative;
+    top: 25px; }
+    #jm_header #jm_logo img {
+      transition: 0.1s ease-in-out; }
+      #jm_header #jm_logo img:hover {
+        transform: translateY(-5px); }
+
+.nav_primary #jm_navbar ul {
+  text-align: center; }
+  .nav_primary #jm_navbar ul li {
+    display: inline-block;
+    margin: 0 -2px; }
+    .nav_primary #jm_navbar ul li a {
+      padding: 2em 1.5em;
+      display: block;
+      color: #000000;
+      background: #ffffff;
+      text-decoration: none;
+      transition: 0.2s ease; }
+      .nav_primary #jm_navbar ul li a:hover {
+        background: #000000;
+        color: #ffffff; }
 .nav_primary #jm_search {
   padding: 1em 0; }
   .nav_primary #jm_search button {
     background: transparent;
     float: right;
+    right: 10%;
+    position: relative;
     transition: 0.2s ease; }
     .nav_primary #jm_search button:hover {
       transform: scale(1.2); }
     .nav_primary #jm_search button img {
       height: 45px; }
+.nav_primary .input-search .jm-enviar {
+  display: none; }
+.nav_primary .input-search .jm-input-field {
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #F1F1F1;
+  display: none; }
+  .nav_primary .input-search .jm-input-field.active {
+    display: block; }
+  .nav_primary .input-search .jm-input-field:focus {
+    border: 2px solid #EC1C24; }
 
 #jm_banners {
   background: #F1F1F1;
@@ -2140,8 +2159,8 @@ select[multiple].input-lg {
     margin-bottom: 2em; }
     #jm_posts article:hover .category a {
       transform: translateY(10px); }
-    #jm_posts article:hover .icon_post0 {
-      fill: #E31119; }
+      #jm_posts article:hover .category a .icon_post0 {
+        fill: #EC1C24; }
     #jm_posts article:hover .inset_shadow {
       opacity: .4; }
     #jm_posts article:hover figcaption {
@@ -2150,6 +2169,22 @@ select[multiple].input-lg {
         text-shadow: 0 0 10px #ffffff; }
     #jm_posts article:hover img {
       transform: scale(1.04); }
+    #jm_posts article .category {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      padding: 1em;
+      z-index: 2; }
+      #jm_posts article .category a {
+        width: 40px;
+        height: 40px;
+        float: left;
+        margin-right: 1em;
+        position: relative;
+        transition: 0.2s ease-in-out; }
+        #jm_posts article .category a .icon_post0 {
+          fill: #808080;
+          transition: 0.2s ease; }
   #jm_posts a {
     text-decoration: none;
     color: #ffffff; }
@@ -2186,7 +2221,7 @@ select[multiple].input-lg {
 .pagination {
   position: relative; }
   .pagination a {
-    padding: 20px;
+    padding: 30px;
     position: absolute;
     border-radius: 100px;
     transition: 0.2s ease; }
@@ -2196,53 +2231,54 @@ select[multiple].input-lg {
     color: #ffffff;
     background: #EC1C24;
     top: -30px;
-    right: 15px; }
+    right: 15px;
+    display: block;
+    background-image: url("../img/icon_more.png");
+    background-position: center;
+    background-repeat: no-repeat; }
   .pagination .newer a {
     color: #000000;
-    background: #F1F1F1;
+    background: #808080;
     top: -30px;
-    left: 15px; }
-
-.category {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  padding: 1em;
-  z-index: 2; }
-  .category a {
-    width: 40px;
-    height: 40px;
-    float: left;
-    margin-right: 1em;
-    position: relative;
-    transition: 0.2s ease-in-out; }
-    .category a .icon_post0 {
-      fill: #808080;
-      transition: 0.2s ease; }
+    left: 15px;
+    display: block;
+    background-image: url("../img/icon_less.png");
+    background-position: center;
+    background-repeat: no-repeat; }
 
 #jm_footer {
   background: #000000;
   padding: 3em 0; }
   #jm_footer #jm_socialnetworkfooter {
     text-align: center;
-    padding: 2em 0; }
+    padding: 2em 0;
+    text-align: center; }
     #jm_footer #jm_socialnetworkfooter li {
-      transition: 0.1s ease-in; }
+      transition: 0.1s ease-in;
+      display: inline-block;
+      text-align: center;
+      margin: 0 5%; }
+      #jm_footer #jm_socialnetworkfooter li a {
+        display: block; }
       #jm_footer #jm_socialnetworkfooter li:hover {
         transform: translateY(-10px); }
         #jm_footer #jm_socialnetworkfooter li:hover .icon {
           fill: #EC1C24; }
   #jm_footer #jm_navfooter ul {
     position: relative;
-    width: 65%;
-    margin: auto; }
+    width: 50%;
+    margin: auto;
+    text-align: center; }
   #jm_footer #jm_navfooter li {
-    float: left;
-    text-align: center;
-    padding: 2em 2em; }
+    display: inline-block;
+    margin: 10% 5%; }
   #jm_footer #jm_navfooter a {
     font-size: 1.2em;
-    color: #808080; }
+    display: block;
+    color: #808080;
+    text-decoration: none; }
+    #jm_footer #jm_navfooter a:hover {
+      color: #ffffff; }
   #jm_footer #jm_sign p {
     text-align: center;
     font-size: 1.2em;
@@ -2263,11 +2299,20 @@ select[multiple].input-lg {
       position: relative;
       bottom: 0;
       color: #EC1C24; }
-    #jm_single .header_single img {
-      box-shadow: -15px 15px 0px #EC1C24; }
   #jm_single .body_post_single p {
     font-size: 1.6em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     color: #808080; }
+
+.jm_category .group_header {
+  background: #F1F1F1;
+  padding-bottom: 15px;
+  margin-bottom: 30px; }
+  .jm_category .group_header .category_header {
+    text-align: center; }
+    .jm_category .group_header .category_header h1 {
+      font-size: 6em;
+      font-weight: 700;
+      margin: 0.4em 0; }
 
 /*# sourceMappingURL=main.css.map */

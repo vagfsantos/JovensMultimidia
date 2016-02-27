@@ -6,9 +6,18 @@
 	#jm_socialnetworkfooter{
 		text-align: center;
 		padding: 2em 0;
+		text-align: center;
 
 		li{
 			@include animation(.1s, ease-in);
+			display: inline-block;
+			text-align: center;
+			margin: 0 5%;
+
+			a{
+				display: block;
+			}
+
 			&:hover {
 				transform: translateY(-10px);
 				.icon{
@@ -22,19 +31,25 @@
 	#jm_navfooter{
 		ul{
 			position: relative;
-			width: 65%;
+			width: 50%;
 			margin: auto;
+			text-align: center;
 		}	
 	
 		li{
-			float: left;
-			text-align: center;
-			padding: 2em 2em;
+			display: inline-block;
+			margin: 10% 5%;
 		}
 
 		a{
 			font-size: 1.2em;
+			display: block;
 			color: $color_gray_dark;
+			text-decoration: none;
+
+			&:hover{
+				color: $color_light;
+			}
 		}
 	}
 

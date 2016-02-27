@@ -4,7 +4,10 @@
 		wp_enqueue_style("style", get_stylesheet_uri());
 		wp_register_style( 'main', get_template_directory_uri() . '/css/main.css', array(), '20120208', 'all' );
 
+		wp_register_script( 'main', get_template_directory_uri() . '/js/main.js', array(), false, true );
+
 		wp_enqueue_style( 'main' );
+		wp_enqueue_script( 'main' );
 	}
 
 	function jovensmultimidia_theme_customizer($wp_customize){

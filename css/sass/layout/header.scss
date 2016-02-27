@@ -1,9 +1,22 @@
+html, body{
+	font-family: 'Oxygen', sans-serif;
+}
+
+
+
 #jm_header{
 	background: $color_light;
-	padding-bottom: .2em;
 
 	#jm_logo{
-		padding: 1.5em 0;
+		position: relative;
+		top: 25px;
+
+		img{
+			@include animation(.1s, ease-in-out);
+			&:hover{
+				transform: translateY(-5px);
+			}
+		}
 	}
 }
 
@@ -11,26 +24,27 @@
 .nav_primary{
 	#jm_navbar{
 
-		.menu-primary-menu-links-container{
-			float: right;
-		}
+		ul{
+			text-align: center;
 
-		li{
-			float: left;
-			padding-top: 2em;
-			a{
-				padding: 2em 1.5em;
-				color: $color_dark;
-				background: $color_light;
-				text-decoration: none;
-				@include animation(.2s, ease-in);
+			li{
+				display: inline-block;
+				margin: 0 -2px;
+				a{
+					padding: 2em 1.5em;
+					display: block;
+					color: $color_dark;
+					background: $color_light;
+					text-decoration: none;
+					@include animation(.2s, ease);
 
-				&:hover{
-					background: $color_gray;
-					border-bottom: 5px solid red;
+					&:hover{
+						background: $color_dark;
+						color: $color_light;
+					}
 				}
-			}// end 'a';
-		}// end 'li';
+			}
+		}
 	}
 
 
@@ -39,6 +53,9 @@
 		button{
 			background: transparent;
 			float: right;
+			right: 10%;
+		    position: relative;
+
 			@include animation(.2s, ease);
 
 			&:hover{
@@ -47,6 +64,25 @@
 
 			img{
 				height: 45px;
+			}
+		}
+	}
+
+	.input-search{
+		.jm-enviar{display: none}
+		.jm-input-field{
+			font-size: 16px;
+			padding: 10px;
+			margin-bottom: 10px;
+			border: 2px solid $color_gray;
+			display: none;
+
+			&.active{
+				display: block;
+			}
+
+			&:focus{
+				border: 2px solid $color_primary;
 			}
 		}
 	}

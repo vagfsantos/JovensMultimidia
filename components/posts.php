@@ -20,7 +20,7 @@
 							<?php 
 								foreach ($category as $c): ?>
 									<div>
-										<a href="" title="<?= $c -> name ?>">
+										<a href="<?=  get_category_link($c -> cat_ID) ?>" title="<?= $c -> name ?>">
 										<?php 
 										if ( $c -> slug ){
 											require "icons_svg/c_".$c -> slug.".php";

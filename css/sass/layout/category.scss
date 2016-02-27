@@ -1,0 +1,17 @@
+.jm_category{
+	.group_header{
+		background: $color_gray;
+		padding-bottom: 15px;
+		margin-bottom: 30px;
+
+		.category_header{
+			text-align: center;
+
+			h1{
+				font-size: 6em;
+				font-weight: 700;
+				margin: 0.4em 0;
+			}
+		}
+	}
+}

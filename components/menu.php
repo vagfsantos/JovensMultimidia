@@ -29,7 +29,11 @@
 			</div>
 
 			<div id="jm_search" class="col-sm-1">
-				<button><img src="<?php echo esc_url( home_url( '/wp-content/themes/jovensmultimidia/img/search.svg' ) ); ?>" alt="Pesquisar"></button>
+				<button id="jm_btn_seach"><img src="<?php echo esc_url( home_url( '/wp-content/themes/jovensmultimidia/img/search.svg' ) ); ?>" alt="Pesquisar"></button>
+			</div>
+
+			<div class="input-search col-xs-12">
+				<?php get_search_form(); ?>
 			</div>
 		</nav>
 

@@ -3,27 +3,27 @@
 
 		<!-- Menu social network-->
 		<div class="row">
-			<nav id="jm_socialnetworkfooter" class="col-sm-4 col-sm-offset-4">
+			<nav id="jm_socialnetworkfooter" class="col-xs-12 col-sm-4 col-sm-offset-4">
 				<ul>
-					<li class="col-sm-3">
+					<li>
 						<a class="social_icon" href="#" title="Curta nossa página no facebook">
 							<?php require_once "icons_svg/facebook.php" ?>
 						</a>
 					</li>
 
-					<li class="col-sm-3">
+					<li>
 						<a class="social_icon" href="#" title="Siga no Pinterest">
 							<?php require_once "icons_svg/pinterest.php" ?>
 						</a>
 					</li>
 
-					<li class="col-sm-3">
+					<li>
 						<a class="social_icon" href="#" title="Siga no Instagram">
 							<?php require_once "icons_svg/instagram.php" ?>
 						</a>
 					</li>
 
-					<li class="col-sm-3">
+					<li>
 						<a class="social_icon" href="#" title="Canal do youtube Jovens Multimidia">
 							<?php require_once "icons_svg/youtube.php" ?>
 						</a>

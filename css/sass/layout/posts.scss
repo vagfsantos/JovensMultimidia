@@ -7,10 +7,9 @@
 		&:hover{
 			.category a{
 				transform: translateY(10px);
-			}
-
-			.icon_post0{
-				fill: #E31119;
+				.icon_post0{
+					fill: $color_primary;
+				}
 			}
 
 			.inset_shadow{
@@ -27,6 +26,30 @@
 
 			img{
 				transform: scale(1.04);
+			}
+		}
+
+		// Category Icons per Post
+		.category{
+			position: absolute;
+			width: 100%;
+			top: 0;
+			padding: 1em;
+			z-index: 2;
+
+			a{
+				width: 40px;
+				height: 40px;
+				//background: $color_primary;
+				float: left;
+				margin-right: 1em;
+				position: relative;
+				@include animation(.2s, ease-in-out);
+
+				.icon_post0{
+					fill: $color_gray_dark;
+					@include animation(.2s, ease);
+				}
 			}
 		}
 	}
@@ -82,7 +105,7 @@
 	position: relative;
 
 	a{
-		padding: 20px;
+		padding: 30px;
 		position: absolute;
 		border-radius: 100px;
 
@@ -98,36 +121,21 @@
 		background: $color_primary;
 		top: -30px;
 		right: 15px;
+		display: block;
+		background-image: url("../img/icon_more.png");
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 
 	.newer a{
 		color: $color_dark;
-		background: $color_gray;
+		background: $color_gray_dark;
 		top: -30px;
 		left: 15px;
+		display: block;
+		background-image: url("../img/icon_less.png");
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 }
 
-// Category Icons per Post
-.category{
-	position: absolute;
-	width: 100%;
-	top: 0;
-	padding: 1em;
-	z-index: 2;
-
-	a{
-		width: 40px;
-		height: 40px;
-		//background: $color_primary;
-		float: left;
-		margin-right: 1em;
-		position: relative;
-		@include animation(.2s, ease-in-out);
-
-		.icon_post0{
-			fill: $color_gray_dark;
-			@include animation(.2s, ease);
-		}
-	}
-}
