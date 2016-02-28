@@ -1,15 +1,15 @@
 <header id="jm_header" class="row">
 	<div class="container">
-		
+
 		<nav class="nav_primary">
 			<!-- Logo NAV-->
 			<div id="jm_logo" class="logo col-sm-3">
 				<?php if ( get_theme_mod( 'jovensmultimidia_logo' ) ) : ?>
-				    
+
 			        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 			        	<img src="<?php echo esc_url( get_theme_mod( 'jovensmultimidia_logo' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 			        </a>
-				    
+
 				<?php else : ?>
 				    <hgroup>
 				        <h1 class='site-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
@@ -17,9 +17,9 @@
 				    </hgroup>
 				<?php endif; ?>
 			</div>
-			
+
 			<div id="jm_navbar" class="col-sm-8">
-				
+
 				<?php
 					// menu primary
 					$local = array("theme_location" => "primary");
@@ -39,3 +39,20 @@
 
 	</div>
 </header>
+
+<div class="row">
+	<div class="container">
+		<div class="col-xs-12">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- After Menu -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-3231161504322283"
+			     data-ad-slot="6884874454"
+			     data-ad-format="auto"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+	</div>
+</div>
