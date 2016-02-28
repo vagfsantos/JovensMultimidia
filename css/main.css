@@ -2042,7 +2042,7 @@ select[multiple].input-lg {
   .hidden-print {
     display: none !important; } }
 html, body {
-  font-family: 'Oxygen', sans-serif; }
+  font-family: 'Raleway', sans-serif; }
 
 #jm_header {
   background: #ffffff; }
@@ -2291,18 +2291,47 @@ html, body {
   padding: 0; }
   #jm_single .header_single {
     margin: 0 0 4em 0;
-    background: #F1F1F1;
+    background: #000000;
     padding: 6em 0; }
     #jm_single .header_single h1.title_single {
-      font-size: 4em;
+      font-size: 5em;
       margin: 0;
       position: relative;
       bottom: 0;
-      color: #EC1C24; }
+      line-height: 75px;
+      font-weight: 900;
+      color: #ffffff; }
+    #jm_single .header_single ul.postmetadata {
+      margin-top: 50px; }
+      #jm_single .header_single ul.postmetadata li {
+        color: #808080; }
+        #jm_single .header_single ul.postmetadata li a {
+          color: #F1F1F1;
+          font-weight: 700; }
+  #jm_single .body_post_single h3, #jm_single .body_post_single h4 {
+    font-size: 4em;
+    margin: 0;
+    margin-bottom: 50px;
+    line-height: 60px;
+    font-weight: 900;
+    color: #000000; }
+  #jm_single .body_post_single h4 {
+    font-size: 2.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px; }
   #jm_single .body_post_single p {
-    font-size: 1.6em;
+    font-size: 1.4em;
     margin-bottom: 2em;
     color: #808080; }
+  #jm_single .jm_author {
+    padding: 50px 0; }
+    #jm_single .jm_author .jm_desc_author h2 a {
+      font-size: 1.5em;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      color: #000000; }
 
 .jm_category .group_header {
   background: #F1F1F1;

@@ -12,9 +12,9 @@
 						<div class="col-xs-12">
 							<h1 class="title_single"><?= the_title(); ?></h1>
 							<ul class="postmetadata clearfix">
-								<li class="author">By <?php the_author_posts_link(); ?></li>
-								<li><?php the_time('l, F jS, Y') ?></li>
-								<li><?php the_category(', ') ?></li>
+								<li class="author">Escrito por: <?php the_author_posts_link(); ?></li>
+								<li>Data: <strong><?php the_time('l, F jS, Y') ?></strong></li>
+								<li>Categorias: <?php the_category(', ') ?></li>
 							</ul>
 						</div>
 					</div>
@@ -66,12 +66,18 @@
 
 			<section class="row">
 				<div class="container">
-					<div class="col-xs-12 author">
-						<?php echo get_avatar( get_the_author_email(), $size = '150'); ?>
-						<div class="authortext">
-							<h4>Sobre o autor <?php the_author_posts_link(); ?></h4>
+					<div class="col-xs-12 jm_author">
+
+						<div class="col-xs-12 col-sm-1 jm_image_author">
+							<?php echo get_avatar( get_the_author_email() ); ?>
+						</div>
+
+						<div class="col-xs-12 col-sm-11 jm_desc_author">
+							<h4>Um pouco mais sobre quem escreveu:</h4>
+							<h2><?php the_author_posts_link(); ?></h2>
 							<p><?php the_author_description(); ?></p>
 						</div>
+
 					</div>
 				</div>
 			</section>
