@@ -5,8 +5,9 @@
 <section class="row">
 	<main id="jm_single" class="container-fluid">
 		<?php if( have_posts() ): while ( have_posts() ) : the_post(); ?>
+			<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) )?>
 		<article>
-			<section class="header_single">
+			<section class="header_single" style="background-image: url('<?= $url ?>')">
 				<div class="row">
 					<div class="container">
 						<div class="col-xs-12">
@@ -64,7 +65,7 @@
 				</div>
 			</div>
 
-			<section class="row">
+			<section class="row jm_bg_author">
 				<div class="container">
 					<div class="col-xs-12 jm_author">
 

@@ -2291,8 +2291,21 @@ html, body {
   padding: 0; }
   #jm_single .header_single {
     margin: 0 0 4em 0;
-    background: #000000;
-    padding: 6em 0; }
+    background-color: #000000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 6em 0;
+    position: relative; }
+    #jm_single .header_single:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.8);
+      left: 0;
+      top: 0; }
     #jm_single .header_single h1.title_single {
       font-size: 5em;
       margin: 0;
@@ -2324,24 +2337,32 @@ html, body {
     font-size: 1.4em;
     margin-bottom: 2em;
     color: #808080; }
-  #jm_single .jm_author {
-    padding: 50px 0; }
-    #jm_single .jm_author .jm_desc_author h2 a {
-      font-size: 1.5em;
-      font-weight: 900;
-      text-transform: uppercase;
-      margin-bottom: 5px;
-      color: #000000; }
+  #jm_single .jm_bg_author {
+    background-color: #F1F1F1; }
+    #jm_single .jm_bg_author .jm_author {
+      padding: 50px 0; }
+      #jm_single .jm_bg_author .jm_author .jm_desc_author h2 a {
+        font-size: 1.5em;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        color: #000000; }
 
 .jm_category .group_header {
-  background: #F1F1F1;
-  padding-bottom: 15px;
+  background: #000000;
+  padding: 15px 0;
   margin-bottom: 30px; }
   .jm_category .group_header .category_header {
     text-align: center; }
     .jm_category .group_header .category_header h1 {
-      font-size: 6em;
-      font-weight: 700;
-      margin: 0.4em 0; }
+      font-size: 5em;
+      font-weight: 900;
+      margin: 0 0 0.4em 0;
+      color: #ffffff; }
+    .jm_category .group_header .category_header .category_desc p {
+      font-size: 1.2em;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 10px; }
 
 /*# sourceMappingURL=main.css.map */
