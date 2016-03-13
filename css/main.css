@@ -371,6 +371,10 @@ img {
   max-width: 100%;
   height: auto; }
 
+.jm_add {
+  margin: 0;
+  margin: 35px 0; }
+
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -2153,10 +2157,11 @@ html, body {
         font-size: 1.4em; }
 
 #jm_posts {
-  margin-top: 2em;
-  margin-bottom: 2em; }
+  margin-top: 2em; }
   #jm_posts article {
     margin-bottom: 2em; }
+    #jm_posts article:nth-child(4), #jm_posts article:nth-child(5), #jm_posts article:nth-child(6) {
+      margin-bottom: 0; }
     #jm_posts article:hover .category a {
       transform: translateY(10px); }
       #jm_posts article:hover .category a .icon_post0 {
@@ -2290,7 +2295,7 @@ html, body {
 #jm_single {
   padding: 0; }
   #jm_single .header_single {
-    margin: 0 0 4em 0;
+    margin: 0;
     background-color: #000000;
     background-position: center;
     background-repeat: no-repeat;
@@ -2337,6 +2342,10 @@ html, body {
     font-size: 1.4em;
     margin-bottom: 2em;
     color: #808080; }
+  #jm_single .body_post_single a {
+    color: #EC1C24; }
+    #jm_single .body_post_single a:hover {
+      color: #dc121a; }
   #jm_single .jm_bg_author {
     background-color: #F1F1F1; }
     #jm_single .jm_bg_author .jm_author {

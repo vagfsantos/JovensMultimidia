@@ -16,6 +16,24 @@
 			</div>
 	</div>
 
+	<div class="row jm_add">
+		<div class="container">
+			<div class="col-xs-12">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- After Categoria title -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-3231161504322283"
+			     data-ad-slot="3636919655"
+			     data-ad-format="auto"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+			</div>
+		</div>
+	</div>
+
+
 	<div class="container">
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -31,12 +49,26 @@
 					</a>
 				</article>
 			<?php endwhile; ?>
-
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
 	</div>
 </section>
+
+<div class="row jm_add">
+	<div class="container">
+		<div class="col-xs-12">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- Categoria footer -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-3231161504322283"
+			     data-ad-slot="7787917652"
+			     data-ad-format="auto"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+	</div>
+</div>
 
 <?php
 	get_footer();

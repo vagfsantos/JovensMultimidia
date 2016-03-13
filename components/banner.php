@@ -55,7 +55,7 @@
 	</div>
 </section>
 
-<div class="row">
+<div class="row jm_add">
 	<div class="container">
 		<div class="col-xs-12">
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

@@ -16,13 +16,15 @@
 								<li class="author">Escrito por: <?php the_author_posts_link(); ?></li>
 								<li>Data: <strong><?php the_time('l, F jS, Y') ?></strong></li>
 								<li>Categorias: <?php the_category(', ') ?></li>
+								<li><!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_sharing_toolbox"></div></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<div class="row">
+			<div class="row jm_add">
 				<div class="container">
 					<div class="col-xs-12">
 						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -44,11 +46,13 @@
 				<div class="container">
 					<div class="col-xs-12 body_post_single">
 						<?php the_content(); ?>
+						<!-- Go to www.addthis.com/dashboard to customize your tools -->
+						<div class="addthis_sharing_toolbox"></div>
 					</div>
 				</div>
 			</section>
 
-			<div class="row">
+			<div class="row jm_add">
 				<div class="container">
 					<div class="col-xs-12">
 						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -89,6 +93,8 @@
 </section>
 
 
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56e57d442e4247f3"></script>
 
 <?php
 	get_footer();
