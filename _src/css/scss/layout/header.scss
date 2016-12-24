@@ -1,0 +1,15 @@
+.m-header{
+    background-color: $t-color--light;
+    
+    .c-header__logo{
+        @extend %l-float--left;
+    }
+    
+    .c-header__main-nav{
+        @extend %l-float--left;
+    }
+    
+    .c-header__secondary-nav{
+        @extend %l-float--right;
+    }
+}

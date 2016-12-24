@@ -11,7 +11,7 @@
 		); ?>
         
         <div class="c-footer__logo">
-			<a href="<?php get_home_url()?>" class="c-footer__logo-link"><?php echo get_bloginfo('name') . '-' . get_bloginfo('description')?></a>
+			<a href="<?= get_home_url()?>" class="c-footer__logo-link"><?= get_bloginfo('name') . '-' . get_bloginfo('description')?></a>
 		</div>
    
     </div>
