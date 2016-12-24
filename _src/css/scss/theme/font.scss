@@ -13,3 +13,20 @@
 %t-font--bold{
     font-weight: 700;
 }
+
+%t-font--upper{
+    text-transform: uppercase;
+}
+
+%t-font--lower{
+    text-transform: lowercase;
+}
+
+%t-font--color-neutro{
+    color: $t-color--neutro-dark;
+}
+
+$browser-context: 16; // Default
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}

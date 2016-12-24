@@ -37,13 +37,9 @@ module.exports = function(grunt){
 
 		cssmin: {
 			target: {
-			    files: [{
-			      	expand: true,
-			      	cwd: 'build/css',
-			      	src: ['*.css'],
-			      	dest: 'build/css',
-			      	ext: '.min.css'
-			    }]
+                files: {
+                    'build/css/main.min.css' : 'build/css/main.css'
+                }
 			}
 		},
 
@@ -57,6 +53,57 @@ module.exports = function(grunt){
 		        }]
 			}
 		},
+        
+        postcss: {
+          options: {
+            map: true,
+            processors: [
+              require('autoprefixer')({browsers: ['last 2 version']})
+            ]
+          },
+          dist: {
+            src: 'build/css/*.css'
+          }
+        },
+        
+//        svg_sprite: {
+//            target: {
+//                expand: true,
+//                cwd: '_src/img/sprite',
+//                src: ['**/*.svg'],
+//                dest: '_src/css/scss/base/sprite',
+//                
+//                commonName: 'sprite',
+//                hasMixin: true,
+//                sprite: '../img/sprite/sprite.svg',
+//                example: 'build/_src/img/sprite/sprite.svg',
+//                
+//                options:{
+//                    shape: {
+//                        dimension: {
+//                            maxWidth: '30px'
+//                        },
+//                        
+//                        spacing: {
+//                            padding: 10
+//                        },
+//                        
+//                        dest: 'intermediate'
+//                    },
+//                    
+//                    mode: {
+//                        view: {
+//                            bust: false,
+//                            render: {
+//                                scss: true
+//                            }
+//                        },
+//                        
+//                        symbol: true
+//                    }
+//                }
+//            }
+//        },
 
 		watch: {
 			js:{
@@ -69,7 +116,7 @@ module.exports = function(grunt){
 
 			css:{
 				files: ['_src/css/scss/**/*.scss'],
-			    tasks: ['sass', 'cssmin'],
+			    tasks: ['sass', 'cssmin', 'postcss'],
 			    options: {
 					event: ['added', 'changed', 'deleted']
 				}
@@ -94,7 +141,8 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks("grunt-contrib-copy");
 	grunt.loadNpmTasks("grunt-contrib-cssmin");
 	grunt.loadNpmTasks("grunt-contrib-uglify");
+    grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks("grunt-contrib-watch");
 
-	grunt.registerTask('default', ['clean', 'image', 'sass', 'cssmin', 'concat', 'uglify', 'watch']);
+	grunt.registerTask('default', ['clean', 'image', 'sass', 'cssmin', 'postcss', 'concat', 'uglify', 'watch']);
 }

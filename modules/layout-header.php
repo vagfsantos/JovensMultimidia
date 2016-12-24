@@ -15,7 +15,7 @@
 		); ?>
 
 		<nav class="c-header__secondary-nav">
-			<span class="c-header__menu-icon">Abrir mais opções de menu</span>
+			<span class="c-header__menu-icon js-header__open-secondary">Abrir mais opções de menu</span>
 
 			<?php wp_nav_menu(
 				array(

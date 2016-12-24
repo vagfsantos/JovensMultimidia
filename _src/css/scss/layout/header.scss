@@ -1,15 +1,155 @@
 .m-header{
     background-color: $t-color--light;
+    border-bottom: 3px solid $t-color--neutro-dark;
     
+    // LOGO
     .c-header__logo{
+        margin-top: 8px;
         @extend %l-float--left;
     }
     
+    .c-header__logo-link{
+        @extend %t-icon;
+        width: 265px;
+        height: 40px;
+        background-image: url('../img/logo.svg');
+    }
+    
+    // MAIN MENU
     .c-header__main-nav{
+        width: calc(100% - 6px - 265px);
         @extend %l-float--left;
     }
     
+    .s-header__main-nav-list{
+        list-style: none;
+        margin: 0;
+        padding: 0 10px;
+        text-align: right;
+        
+        > .menu-item{
+            text-align: center;
+            display: inline-block;
+            margin: 0 -2px;
+            
+            > a{
+                font-size: em(15);
+                @extend %t-font--upper;
+                @extend %t-font--bold;
+                @extend %t-font--color-neutro;
+                text-decoration: none;
+                padding: 20px;
+                display: block;
+                border-bottom-width: 3px;
+                border-bottom-style: solid;
+                border-bottom-color: transparent;
+                margin-bottom: -3px;
+                transition: .2s ease-in;
+                appearance: none;
+                
+                &[href*=design]{
+                    border-bottom-color: $t-color--design;
+                    box-shadow: inset 0 0 0 0 $t-color--design;
+                }
+                
+                &[href*=programacao]{
+                    border-bottom-color: $t-color--code;
+                    box-shadow: inset 0 0 0 0 $t-color--code;
+                }
+                
+                &[href*=audiovisual]{
+                    border-bottom-color: $t-color--audiovisual;
+                    box-shadow: inset 0 0 0 0 $t-color--audiovisual;
+                }
+                
+                &[href*=comportamento]{
+                    border-bottom-color: $t-color--behavior;
+                    box-shadow: inset 0 0 0 0 $t-color--behavior;
+                }
+                
+                &[href*=jogos]{
+                    border-bottom-color: $t-color--games;
+                    box-shadow: inset 0 0 0 0 $t-color--games;
+                }
+                
+                
+                &:hover{
+                    color: #fff;
+                    
+                    &[href*=design]{
+                        box-shadow: inset 0 100px 0 0 $t-color--design;
+                    }
+
+                    &[href*=programacao]{
+                        box-shadow: inset 0 100px 0 0 $t-color--code;
+                    }
+
+                    &[href*=audiovisual]{
+                        box-shadow: inset 0 100px 0 0 $t-color--audiovisual;
+                    }
+
+                    &[href*=comportamento]{
+                        box-shadow: inset 0 100px 0 0 $t-color--behavior;
+                    }
+
+                    &[href*=jogos]{
+                        box-shadow: inset 0 100px 0 0 $t-color--games;
+                    }
+                }
+            }
+        }
+    }
+    
+    // OPTIONS MENU
     .c-header__secondary-nav{
         @extend %l-float--right;
+        position: relative;
+    }
+    
+    .c-header__menu-icon{
+        margin-top: 16px;
+        cursor: pointer;
+        @extend %t-icon;
+        width: 6px;
+        height: 21px;
+        background-image: url('../img/menu-circle.svg');
+    }
+    
+    .c-header__secondary-drop{
+        width: 160px;
+        @extend %t-hide;
+        overflow: hidden;
+        position: absolute;
+        left: -15px;
+        top: 0;
+        z-index: 2;
+        background-color: $t-color--light;
+        box-shadow: 0 0 15px 0 $t-color--neutro-dark;
+        transition: .2s ease-in-out;
+        
+        &.js--active{
+            left: 0px;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    
+    .c-header__secondary-drop-list{
+        padding: 0;
+        text-align: center;
+        list-style: none;
+        
+        a{
+            display: block;
+            padding: 5px 0;
+            @extend %t-font--color-neutro;
+            text-decoration: none;
+            transition: .2s;
+            
+            &:hover{
+                color: $t-color--dark;
+                background-color: $t-color--neutro-light;
+            }
+        }
     }
 }
