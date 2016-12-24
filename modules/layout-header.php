@@ -2,7 +2,7 @@
 	
 	<div class="l-container">
 		<div class="c-header__logo">
-			<a href="<?php get_home_url()?>" class="c-header__logo-link">Jovens Multimídia - Estude mais, para ser mais</a>
+			<a href="<?= get_home_url()?>" class="c-header__logo-link"><?= get_bloginfo('name') . '-' . get_bloginfo('description')?></a>
 		</div>
 
 		<?php wp_nav_menu(
