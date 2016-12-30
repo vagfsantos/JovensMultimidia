@@ -8,3 +8,69 @@ $t-color--code: #45cc62;
 $t-color--audiovisual: #ff4a41;
 $t-color--behavior: #ffb443;
 $t-color--games: #cc4db0;
+
+%t-bg-category{
+    &[class*=design]{
+        background-color: $t-color--design;
+    }
+
+    &[class*=programacao]{
+        background-color: $t-color--code;
+    }
+
+    &[class*=audiovisual]{
+        background-color: $t-color--audiovisual;
+    }
+
+    &[class*=comportamento]{
+        background-color: $t-color--behavior;
+    }
+
+    &[class*=jogos]{
+        background-color: $t-color--games;
+    }
+}
+
+%t-bg-category--dark{
+    &[class*=design]{
+        background-color: darken($t-color--design, 10%);
+    }
+
+    &[class*=programacao]{
+        background-color: $t-color--code;
+    }
+
+    &[class*=audiovisual]{
+        background-color: $t-color--audiovisual;
+    }
+
+    &[class*=comportamento]{
+        background-color: $t-color--behavior;
+    }
+
+    &[class*=jogos]{
+        background-color: $t-color--games;
+    }
+}
+
+%t-color-category{
+    &[class*=design]{
+        color: $t-color--design;
+    }
+
+    &[class*=programacao]{
+        color: $t-color--code;
+    }
+
+    &[class*=audiovisual]{
+        color: $t-color--audiovisual;
+    }
+
+    &[class*=comportamento]{
+        color: $t-color--behavior;
+    }
+
+    &[class*=jogos]{
+        color: $t-color--games;
+    }
+}
