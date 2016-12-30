@@ -6,13 +6,12 @@ window.addEventListener('DOMContentLoaded', function(){
     var drop = document.querySelector('.c-header__secondary-drop');
 
     openMenu.addEventListener('click', function(){
-        drop.classList.toggle('js--active');
-        
-        body.removeEventListener('click', whenMenuOpened, false);
+        drop.classList.add('js--active');
         
         setTimeout(function(){
            body.addEventListener('click', whenMenuOpened, false);
         }, 0);
+        
         
     },false);
     
@@ -21,8 +20,10 @@ window.addEventListener('DOMContentLoaded', function(){
         var elem = e.target.closest('.c-header__secondary-drop');
         
         if( !elem ){
-            drop.classList.toggle('js--active');
+            drop.classList.remove('js--active');
         }
+        
+        body.removeEventListener('click', whenMenuOpened, false);
     }
     
 }, false);
