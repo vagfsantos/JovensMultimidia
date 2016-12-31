@@ -1,0 +1,59 @@
+.m-post-box{
+    @extend %l-clear;
+    background-color: $t-color--light;
+    
+    .c-post-box__title{
+        @extend %t-font-face--support, %t-font--bold;
+        font-size: em(21);
+        color: $t-color--light;
+        border-top-width: 3px;
+        border-top-style: solid;
+        padding: em(6) em(20);
+        margin: 0;
+        
+        &.is--behavior{
+            background-color: $t-color--behavior;
+            border-top-color: lighten($t-color--behavior, 10%);
+        }
+        
+        &.is--design{
+            background-color: $t-color--design;
+            border-top-color: lighten($t-color--design, 10%);
+        }
+        
+        &.is--code{
+            background-color: $t-color--code;
+            border-top-color: lighten($t-color--code, 10%);
+        }
+        
+        &.is--audiovisual{
+            background-color: $t-color--audiovisual;
+            border-top-color: lighten($t-color--audiovisual, 10%);
+        }
+        
+        &.is--games{
+            background-color: $t-color--games;
+            border-top-color: lighten($t-color--games, 10%);
+        }
+    }
+    
+    .c-post-box__list{
+        padding: em(20) em(5);
+        
+        &.t-col-3{
+            .m-post{
+                width: 33.3%;
+                float: left;
+                padding: em(15);
+            }
+        }
+        
+        &.t-col-4{
+            .m-post{
+                width: 25%;
+                float: left;
+                padding: em(15);
+            }
+        }
+    }
+}

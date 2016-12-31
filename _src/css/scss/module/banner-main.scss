@@ -145,43 +145,4 @@
             text-align: left;
         }
     }
-    
-    
-    .s-banner-main__categories{
-        ul{
-            padding: 0;
-        }
-        
-        li{
-            display: inline-block;
-        }
-        
-        a{
-            display: block;
-            color: $t-color--light;
-            text-decoration: none;
-            padding: em(5) em(10);
-            font-size: em(12);
-            
-            &[href*=design]{
-                background-color: darken($t-color--design, 8%);
-            }
-
-            &[href*=programacao]{
-                background-color: darken($t-color--code, 8%);
-            }
-
-            &[href*=audiovisual]{
-                background-color: darken($t-color--audiovisual, 8%);
-            }
-
-            &[href*=comportamento]{
-                background-color: darken($t-color--behavior, 8%);
-            }
-
-            &[href*=jogos]{
-                background-color: darken($t-color--games, 8%);
-            }
-        }
-    }
 }
