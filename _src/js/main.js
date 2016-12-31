@@ -1,4 +1,3 @@
-
 window.addEventListener('DOMContentLoaded', function(){
     
     var body = document.querySelector('body');
@@ -53,3 +52,9 @@ window.addEventListener('DOMContentLoaded', function(){
 		return null;
 	};
 })(Element.prototype);
+$(document).ready(function(){
+    $('.m-banner-main').slick({
+        arrows: false,
+        dots: true
+    });
+});

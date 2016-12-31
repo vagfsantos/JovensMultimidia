@@ -1,10 +1,53 @@
 .m-banner-main{
     margin: em(15) 0;
+    position: relative;
+    
+    .slick-list{
+        overflow: hidden;
+    }
+    
+    .slick-dots{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        z-index: 1;
+        top: 15px;
+        right: 10px;
+        
+        li{
+            display: inline-block;
+            opacity: .4;
+            margin: 0 8px;
+            
+            &:hover,
+            &.slick-active{
+                opacity: 1;
+            }
+        }
+        
+        button{
+            display: block;
+            background: $t-color--light;
+            border: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            text-indent: -999em;
+            overflow: hidden;
+            cursor: pointer;
+            
+            &:focus{
+                outline: none;
+            }
+        }
+    }
     
     .c-banner-main__item{
         @extend %l-clear, %t-bg-category;
         background-color: $t-color--neutro-dark;
         position: relative;
+        display: inline-block;
     }
     
     .c-banner-main__image{
@@ -36,6 +79,35 @@
         @extend %t-font--bold, %t-font-face--support;
         color: $t-color--light;
         line-height: normal;
+        position: relative;
+        
+        $lh: 1.2em;
+        $l: 3;
+        
+        &[class*=design]{
+            @include multiLineEllipsis( $lh, $l, $t-color--design );
+            text-align: left;
+        }
+
+        &[class*=programacao]{
+            @include multiLineEllipsis( $lh, $l, $t-color--code );
+            text-align: left;
+        }
+
+        &[class*=audiovisual]{
+            @include multiLineEllipsis( $lh, $l, $t-color--audiovisual );
+            text-align: left;
+        }
+
+        &[class*=comportamento]{
+            @include multiLineEllipsis( $lh, $l, $t-color--behavior );
+            text-align: left;
+        }
+
+        &[class*=jogos]{
+            @include multiLineEllipsis( $lh, $l, $t-color--games );
+            text-align: left;
+        }
     }
     
     .c-banner-main__description{
@@ -44,6 +116,34 @@
         max-height: 87px;
         overflow: hidden;
         font-size: em(13);
+        
+        $lh: 1.4em;
+        $l: 4;
+        
+        &[class*=design]{
+            @include multiLineEllipsis( $lh, $l, $t-color--design );
+            text-align: left;
+        }
+
+        &[class*=programacao]{
+            @include multiLineEllipsis( $lh, $l, $t-color--code );
+            text-align: left;
+        }
+
+        &[class*=audiovisual]{
+            @include multiLineEllipsis( $lh, $l, $t-color--audiovisual );
+            text-align: left;
+        }
+
+        &[class*=comportamento]{
+            @include multiLineEllipsis( $lh, $l, $t-color--behavior );
+            text-align: left;
+        }
+
+        &[class*=jogos]{
+            @include multiLineEllipsis( $lh, $l, $t-color--games );
+            text-align: left;
+        }
     }
     
     
