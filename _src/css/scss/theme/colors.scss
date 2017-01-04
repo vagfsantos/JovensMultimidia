@@ -14,7 +14,7 @@ $t-color--games: #cc4db0;
         background-color: $t-color--design;
     }
 
-    &[class*=programacao]{
+    &[class*=programa]{
         background-color: $t-color--code;
     }
 
@@ -36,7 +36,7 @@ $t-color--games: #cc4db0;
         background-color: darken($t-color--design, 10%);
     }
 
-    &[class*=programacao]{
+    &[class*=programa]{
         background-color: $t-color--code;
     }
 
@@ -58,7 +58,7 @@ $t-color--games: #cc4db0;
         color: $t-color--design;
     }
 
-    &[class*=programacao]{
+    &[class*=programa]{
         color: $t-color--code;
     }
 

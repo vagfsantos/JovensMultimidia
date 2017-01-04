@@ -6,8 +6,6 @@
 
 ?>
 
-
-
 <?php if( !empty($sliderPosts) ): ?>
         <section class="l-row">
             <div class="l-container">
@@ -36,14 +34,14 @@
                         <div class="c-banner-main__info-box">
                             <div class="c-banner-main__info-text">
                                 <a class="c-banner-main__post-link" href="<?php echo get_permalink(); ?>" title="<?php echo the_title();?>">
-                                    <h2 class="c-banner-main__post-title <?php echo  $categoryClass?>"><?php echo the_title(); ?></h2>
+                                    <h2 class="c-banner-main__post-title js-truncate-text <?php echo  $categoryClass?>"><?php echo the_title(); ?></h2>
                                 </a>
                                 <div class="s-banner-main__categories <?php echo  $categoryClass?>">
                                     <?php echo the_category(); ?>
                                 </div>
                                 <a class="c-banner-main__post-link" href="<?php echo get_permalink(); ?>" title="<?php echo the_title();?>">
-                                    <p class="c-banner-main__description <?php echo  $categoryClass?>">
-                                        <?php echo wp_strip_all_tags( get_the_content() ); ?>
+                                    <p class="c-banner-main__description js-truncate-text <?php echo  $categoryClass?>">
+                                        <?php echo truncateText( wp_strip_all_tags( get_the_content() ) ); ?>
                                     </p>
                                 </a>
                             </div>

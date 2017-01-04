@@ -1,6 +1,7 @@
 .m-post-box{
     @extend %l-clear;
     background-color: $t-color--light;
+    margin-bottom: em(18);
     
     .c-post-box__title{
         @extend %t-font-face--support, %t-font--bold;
@@ -45,6 +46,10 @@
                 width: 33.3%;
                 float: left;
                 padding: em(15);
+                
+                &:nth-child(3n+4){
+                    clear: both;
+                }
             }
         }
         
@@ -53,7 +58,18 @@
                 width: 25%;
                 float: left;
                 padding: em(15);
+                
+                &:nth-child(4n+5){
+                    clear: both;
+                }
             }
+        }
+    }
+    
+    &.has--ad{
+        .c-post-box__list{
+            width: 75%;
+            float: right;
         }
     }
 }

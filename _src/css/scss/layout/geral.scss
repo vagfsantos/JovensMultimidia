@@ -71,3 +71,27 @@ body{
         }
     }
 }
+
+.s-post__categories{
+    a{
+        &[href*=design]{
+            background-color: $t-color--design;
+        }
+
+        &[href*=programacao]{
+            background-color: $t-color--code;
+        }
+
+        &[href*=audiovisual]{
+            background-color: $t-color--audiovisual;
+        }
+
+        &[href*=comportamento]{
+            background-color: $t-color--behavior;
+        }
+
+        &[href*=jogos]{
+            background-color: $t-color--games;
+        }
+    }
+}

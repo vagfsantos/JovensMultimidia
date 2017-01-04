@@ -1,21 +1,21 @@
 <?php
-    $lastPosts = get_posts(array(
+    $youMayLike = get_posts(array(
         'numberposts' => 4,
-        'offset' => 3
+        'orderby' => 'rand'
     ));
 ?>
 
-<?php if( !empty($lastPosts) ): ?>
+<?php if( !empty($youMayLike) ): ?>
     <section class="l-row">
         <div class="l-container">
             
             <div class="m-post-box">
                 <div class="c-post-box__title-box">
-                    <h5 class="c-post-box__title is--behavior">Os mais recentes</h5>
+                    <h5 class="c-post-box__title is--design">Você pode gostar</h5>
                 </div>
                 
                 <div class="c-post-box__list t-col-4">
-                    <?php foreach ($lastPosts as $post) : setup_postdata( $post ); ?>
+                    <?php foreach ($youMayLike as $post) : setup_postdata( $post ); ?>
                         <?php get_template_part( 'modules/layout', 'post' ); ?>
                     <?php endforeach; ?>
                 </div>

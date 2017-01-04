@@ -16,7 +16,7 @@
         
         <figcaption class="c-post__image-caption">
             <a class="c-post__link" href="<?php echo get_permalink(); ?>" title="<?php echo the_title();?>">
-                <h3 class="c-post__title"><?php echo  the_title(); ?></h3>
+                <h3 class="c-post__title js-truncate-text"><?php echo  the_title(); ?></h3>
             </a>
             
             <div class="s-post__categories <?php echo  $categoryClass?>">
@@ -24,8 +24,8 @@
             </div>
             
             <a class="c-post__link" href="<?php echo get_permalink(); ?>" title="<?php echo the_title();?>">
-                <p class="c-post__description">
-                    <?php echo wp_strip_all_tags( get_the_content() ); ?>
+                <p class="c-post__description js-truncate-text">
+                    <?php echo truncateText(wp_strip_all_tags( get_the_content() )); ?>
                 </p>
             </a>
         </figcaption>

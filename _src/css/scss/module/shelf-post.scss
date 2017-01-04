@@ -10,14 +10,14 @@
         transition: .3s ease-in-out;
         
         &[class*=comportamento]{
-            border-color: $t-color--behavior;
+            border-color: $t-color--behavior
         }
         
         &[class*=design]{
             border-color: $t-color--design;
         }
         
-        &[class*=programacao]{
+        &[class*=programa]{
             border-color: $t-color--code;
         }
         
@@ -35,34 +35,28 @@
     }
     
     .c-post__title{
-        $lh: 1.2em;
-        $l: 3;
-        
         margin: em(10) 0;
         font-size: em(14);
         color: $t-color--dark;
         overflow: hidden;
         @extend %t-font--bold, %t-font-face--support;
-        @include multiLineEllipsis( $lh, $l, $t-color--light );
         text-align: left;
+        max-height: 48px;
     }
     
     
     .c-post__description{
-        $lh: 1.2em;
-        $l: 6;
-        
         margin: em(10) 0;
         font-size: em(12);
         color: $t-color--dark;
         overflow: hidden;
-        @include multiLineEllipsis( $lh, $l, $t-color--light );
         text-align: left;
+        max-height: 65px;
     }
     
     &:hover{
         .c-post__image{
-            transform: translateY(-5px);
+            transform: translateY(-3px);
             opacity: .9;
         }
     }
