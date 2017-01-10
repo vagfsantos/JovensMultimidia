@@ -72,10 +72,35 @@
                     box-shadow: inset 0 0 0 0 $t-color--games;
                 }
                 
-                
                 &:hover{
                     color: #fff;
-                    
+
+                    &[href*=design]{
+                        box-shadow: inset 0 100px 0 0 $t-color--design;
+                    }
+
+                    &[href*=programacao]{
+                        box-shadow: inset 0 100px 0 0 $t-color--code;
+                    }
+
+                    &[href*=audiovisual]{
+                        box-shadow: inset 0 100px 0 0 $t-color--audiovisual;
+                    }
+
+                    &[href*=comportamento]{
+                        box-shadow: inset 0 100px 0 0 $t-color--behavior;
+                    }
+
+                    &[href*=jogos]{
+                        box-shadow: inset 0 100px 0 0 $t-color--games;
+                    }
+                }           
+            }
+            
+            &.current-menu-item{
+                >a{
+                    color: #fff;
+
                     &[href*=design]{
                         box-shadow: inset 0 100px 0 0 $t-color--design;
                     }

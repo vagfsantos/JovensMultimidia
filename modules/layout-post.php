@@ -24,8 +24,8 @@
             </div>
             
             <a class="c-post__link" href="<?php echo get_permalink(); ?>" title="<?php echo the_title();?>">
-                <p class="c-post__description js-truncate-text">
-                    <?php echo truncateText(wp_strip_all_tags( get_the_content() )); ?>
+                <p class="c-post__description">
+                    <?php echo truncateText(wp_strip_all_tags( get_the_content() ), 170) . "..."; ?>
                 </p>
             </a>
         </figcaption>

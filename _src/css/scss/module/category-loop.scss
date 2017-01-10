@@ -1,0 +1,17 @@
+.m-category__loop{
+    background-color: $t-color--light;
+    padding: 30px 15px 10px;
+    @extend %l-clear;
+    margin-bottom: 20px;
+    
+    .m-post{
+        width: 33.3%;
+        float: left;
+        padding: 0 10px;
+        margin-bottom: 20px;
+        
+        &:nth-child(3n+4){
+            clear: both;
+        }
+    }
+}
