@@ -1,0 +1,43 @@
+.m-pagination{
+    margin-bottom: 20px;
+    
+    .navigation{
+        > h2{display: none;}
+    }
+    
+    .nav-links{
+        @extend %l-clear;
+    }
+    
+    .page-numbers{
+        display: none;
+
+        &.prev,
+        &.next{
+            display: block;
+            padding: em(10) em(15);
+            text-align: center;
+            color: $t-color--light;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
+        
+        &.prev{
+            float: left;
+            background-color: $t-color--neutro-dark;
+            
+            &:hover{
+                background-color: darken($t-color--neutro-dark, 15%);
+            }
+        }
+        
+        &.next{
+            float: right;
+            background-color: $t-color--code;
+            
+            &:hover{
+                background-color: darken($t-color--code, 15%);
+            }
+        }
+    }
+}
