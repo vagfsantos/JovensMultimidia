@@ -12,3 +12,44 @@
     visibility: hidden;
     opacity: 0;
 }
+
+%t-basic-format{
+    p{
+        font-size: em(15);
+        line-height: em(22);
+    }
+    
+    img{
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    h1,h2,h3{
+        font-size: em(28);
+        @extend %t-font--bold, %t-font-face--support;
+    }
+    
+    h4,h5,h6{
+        font-size: em(20);
+        @extend %t-font--bold, %t-font-face--support;
+        opacity: .8;
+        font-style: italic;
+    }
+    
+    blockquote{
+        background: $t-color--neutro-light;
+        padding: em(16);
+        font-style: italic;
+        font-size: em(16);
+    }
+    
+    a{
+        color: $t-color--design;
+        @extend %t-font--bold;
+        transition: color .3s;
+        &:hover{
+            color: darken($t-color--design, 30%);
+        }
+    }
+}

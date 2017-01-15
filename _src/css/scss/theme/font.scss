@@ -26,12 +26,6 @@
     color: $t-color--neutro-dark;
 }
 
-$browser-context: 16; // Default
-@function em($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}em;
-}
-
-
 /* mixin for multiline */
 @mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white){
   overflow: hidden;

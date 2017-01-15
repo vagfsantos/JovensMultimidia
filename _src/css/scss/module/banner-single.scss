@@ -1,0 +1,49 @@
+.m-banner-single{
+    margin: em(15) 0 0;
+    position: relative;
+    @extend %l-clear, %t-bg-category;
+    background-color: $t-color--neutro-dark;
+    position: relative;
+
+    
+    .c-banner-single__image{
+        width: 68.5%;
+        float: left;
+    }
+    
+    .c-banner-single__info-box{
+        width: 31.5%;
+        float: right;
+    }
+    
+    .c-banner-single__info-wrapper{
+        position: absolute;
+        bottom: 25px;
+        padding: 0 em(20);
+    }
+    
+    .c-banner-single__date{
+        font-size: em(11);
+        color: $t-color--light;
+        font-style: italic;
+        display: block;
+        margin: 0 0 em(2);
+    }
+    
+    .c-banner-single__title{
+        font-size: em(18);
+        color: $t-color--light;
+        font-weight: 700;
+        text-transform: uppercase;
+        @extend %t-font-face--support;
+        margin: 0 0 20px;
+    }
+    
+    .c-banner-single__description{
+        font-size: em(13);
+        color: $t-color--light;
+        opacity: .8;
+        overflow: hidden;
+        max-height: 180px;
+    }
+}
