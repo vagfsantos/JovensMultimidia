@@ -14,4 +14,9 @@
         float: right;
         @extend %t-basic-format;
     }
+    
+    .c-content-sigle__share-title{
+        font-size: em(18);
+        @extend %t-font--bold;
+    }
 }
