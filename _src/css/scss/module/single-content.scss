@@ -1,16 +1,15 @@
 .m-content-sigle{
-    padding: em(40) em(30);
+    padding: em(30) em(20);
     background-color: $t-color--light;
-    margin-bottom: em(15);
     @extend %l-clear;
     
     .c-content-sigle__side{
-        width: 250px;
+        width: 300px;
         float: left;
     }
     
     .c-content-sigle__post{
-        width: calc(100% - 270px);
+        width: calc(100% - 320px);
         float: right;
         @extend %t-basic-format;
     }

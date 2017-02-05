@@ -6,7 +6,9 @@
 
 <main>
     <?php get_template_part( 'modules/category', 'banner' ); ?>
+    <?php get_template_part( 'modules/ad', 'wide' ); ?>
     <?php get_template_part( 'modules/category', 'loop' ); ?>
+    <?php get_template_part( 'modules/ad', 'wide' ); ?>
     <?php get_template_part( 'modules/layout', 'pagination' ); ?>
 </main>
 

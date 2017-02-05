@@ -11,11 +11,11 @@
             
             <div class="m-post-box has--ad">
                 <div class="c-post-box__title-box">
-                    <h5 class="c-post-box__title is--audiovisual">Você pode gostar</h5>
+                    <h5 class="c-post-box__title is--audiovisual">Os populares</h5>
                 </div>
                 
                 <div class="c-post-box__ad">
-                    
+                    <?php include('ad-vertical-long.php');?>
                 </div>
                 
                 <div class="c-post-box__list t-col-3">

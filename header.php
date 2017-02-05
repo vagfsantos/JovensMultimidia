@@ -4,7 +4,7 @@
 		<meta charset="<?php bloginfo('charset')?>" />
 		<meta name="viewport" content="width=device-width" />
 		<link href="https://fonts.googleapis.com/css?family=Hind:400,700|Pridi:400,700" rel="stylesheet" />
-		<title><?php bloginfo("name")?></title>
+		<title><?php bloginfo('name'); wp_title('-');?></title>
 		<?php wp_head()?>
 	</head>
 

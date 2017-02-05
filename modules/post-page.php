@@ -50,7 +50,7 @@
                    </div>
                    
                    <aside class="c-content-sigle__side">
-                       
+                       <?php include("ad-vertical-too-long.php");?>
                    </aside>
                 </div>
             </article>

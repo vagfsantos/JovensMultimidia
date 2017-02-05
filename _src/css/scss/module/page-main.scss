@@ -1,0 +1,19 @@
+.m-content-page{
+    
+    .c-content-page__title{
+        padding: em(12);
+        font-size: em(28);
+        background-color: $t-color--light;
+        margin: em(15) 0 0;
+        color: $t-color--neutro-dark;
+        border-left: 8px solid $t-color--design;
+        @extend %t-font--upper, %t-font-face--support;
+    }
+    
+    .c-content-page__post{
+        padding: em(40) em(30);
+        background-color: $t-color--light;
+        margin: em(15) 0;
+        @extend %l-clear;
+    }
+}

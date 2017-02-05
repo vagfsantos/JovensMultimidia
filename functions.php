@@ -23,4 +23,24 @@
     add_theme_support( 'post-thumbnails' );
     add_image_size( 'banner-main', 720, 420, array( 'center', 'center' ) );
     add_image_size( 'shelf-main', 240, 165, array( 'center', 'center' ) );
+
+
+    // meta tags
+    function add_meta_tags() {
+        global $post;
+        if ( is_single() ) {
+            $meta = strip_tags( $post->post_content );
+            $meta = strip_shortcodes( $post->post_content );
+            $meta = str_replace( array("\n", "\r", "\t"), ' ', $meta );
+            $meta = substr( $meta, 0, 125 );
+            $keywords = get_the_category( $post->ID );
+            $metakeywords = '';
+            foreach ( $keywords as $keyword ) {
+                $metakeywords .= $keyword->cat_name . ", ";
+            }
+            echo '<meta name="description" content="' . $meta . '" />' . "\n";
+            echo '<meta name="keywords" content="' . $metakeywords . '" />' . "\n";
+        }
+    }
+    add_action( 'wp_head', 'add_meta_tags' , 2 );
 ?>

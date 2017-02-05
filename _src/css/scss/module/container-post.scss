@@ -1,7 +1,7 @@
 .m-post-box{
     @extend %l-clear;
     background-color: $t-color--light;
-    margin-bottom: em(18);
+//    margin-bottom: em(18);
     
     .c-post-box__title{
         @extend %t-font-face--support, %t-font--bold;
@@ -38,6 +38,13 @@
         }
     }
     
+    .c-post-box__ad{
+        width: 160px;
+        margin-left: em(30);
+        margin-top: em(20);
+        float: left;
+    }
+    
     .c-post-box__list{
         padding: em(20) em(5);
         
@@ -68,7 +75,7 @@
     
     &.has--ad{
         .c-post-box__list{
-            width: 75%;
+            width: calc(100% - 200px);
             float: right;
         }
     }
