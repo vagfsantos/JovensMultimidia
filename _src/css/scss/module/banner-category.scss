@@ -23,12 +23,13 @@
     }
     
     .c-banner-category__title{
-        font-size: em(57);
+        font-size: em(32);
         color: $t-color--light;
         font-weight: 700;
         text-transform: uppercase;
         @extend %t-font-face--support;
         margin: 0 0 20px;
+        word-break: break-all;
     }
     
     .c-banner-category__description{
