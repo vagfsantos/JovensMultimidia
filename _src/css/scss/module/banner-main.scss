@@ -78,7 +78,6 @@
         font-size: em(20);
         @extend %t-font--bold, %t-font-face--support;
         color: $t-color--light;
-        line-height: normal;
         position: relative;
     }
     

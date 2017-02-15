@@ -6,8 +6,9 @@
 
 <main>
     <?php get_template_part( 'modules/post', 'page' ); ?>
-    <?php get_template_part( 'modules/ad', 'wide' ); ?>
     <?php get_template_part( 'modules/author', 'description' ); ?>
+    <?php get_template_part( 'modules/ad', 'wide' ); ?>
+    <?php get_template_part( 'modules/comments'); ?>
     <?php get_template_part( 'modules/ad', 'wide' ); ?>
     <?php get_template_part( 'modules/post', 'youmaylike' ); ?>
     <?php get_template_part( 'modules/ad', 'wide' ); ?>
