@@ -4,12 +4,12 @@
     @extend %l-clear;
     
     .m-post{
-        width: 33.3%;
+        width: 25%;
         float: left;
         padding: 0 10px;
         margin-bottom: 20px;
         
-        &:nth-child(3n+4){
+        &:nth-child(4n+5){
             clear: both;
         }
     }

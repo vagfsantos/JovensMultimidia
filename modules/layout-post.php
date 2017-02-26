@@ -28,6 +28,9 @@
                     <?php echo truncateText(wp_strip_all_tags( get_the_content() ), 170) . "..."; ?>
                 </p>
             </a>
+            <!-- TAGS -->
+            <?php require('tag-clouds.php'); ?>
+            <!-- END TAGS -->
         </figcaption>
     </figure>
 </article>
