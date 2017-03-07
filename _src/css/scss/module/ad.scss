@@ -1,5 +1,10 @@
 .m-ad{
     margin: em(15) 0;
+    display: none;
+    
+    @media SCREEN AND (min-width: 1000px){
+        display: block;
+    }
     
     &.is--wide{
         text-align: center;

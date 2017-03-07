@@ -48,24 +48,32 @@
         background-color: $t-color--neutro-dark;
         position: relative;
         display: inline-block;
+        vertical-align: top;
     }
     
     .c-banner-main__image{
-        width: 68.5%;
-        float: left;
+        @media SCREEN AND (min-width : 1000px){
+            width: 68.5%;
+            float: left;
+        }
     }
     
     .c-banner-main__info-box{
-        width: 31.5%;
-        float: right;
+        @media SCREEN AND (min-width : 1000px){
+            width: 31.5%;
+            float: right;
+        }
     }
     
     .c-banner-main__info-text{
-        width: 31.5%;
         padding: em(0) em(30) em(15) em(15);
-        position: absolute;
-        bottom: 0;
-        right: 0;
+        
+        @media SCREEN AND (min-width : 1000px){
+            width: 31.5%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
     }
     
     .c-banner-main__post-link{

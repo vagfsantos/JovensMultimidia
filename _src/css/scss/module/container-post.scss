@@ -1,7 +1,7 @@
 .m-post-box{
     @extend %l-clear;
     background-color: $t-color--light;
-//    margin-bottom: em(18);
+    margin-bottom: em(18);
     
     .c-post-box__title{
         @extend %t-font-face--support, %t-font--bold;
@@ -39,10 +39,12 @@
     }
     
     .c-post-box__ad{
-        width: 160px;
-        margin-left: em(30);
-        margin-top: em(20);
-        float: left;
+        @media SCREEN AND (min-width : 1000px){
+            width: 160px;
+            margin-left: em(30);
+            margin-top: em(20);
+            float: left;
+        }
     }
     
     .c-post-box__list{
@@ -50,9 +52,12 @@
         
         &.t-col-3{
             .m-post{
-                width: 33.3%;
-                float: left;
                 padding: em(15);
+                
+                @media SCREEN AND (min-width : 1000px){
+                    width: 33.3%;
+                    float: left;
+                }
                 
                 &:nth-child(3n+4){
                     clear: both;
@@ -62,9 +67,12 @@
         
         &.t-col-4{
             .m-post{
-                width: 25%;
-                float: left;
                 padding: em(15);
+                
+                @media SCREEN AND (min-width : 1000px){
+                    width: 25%;
+                    float: left;
+                }
                 
                 &:nth-child(4n+5){
                     clear: both;
@@ -75,8 +83,10 @@
     
     &.has--ad{
         .c-post-box__list{
-            width: calc(100% - 200px);
-            float: right;
+            @media SCREEN AND (min-width : 1000px){
+                width: calc(100% - 200px);
+                float: right;
+            }
         }
     }
 }

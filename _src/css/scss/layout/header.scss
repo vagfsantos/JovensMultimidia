@@ -2,23 +2,47 @@
     background-color: $t-color--light;
     border-bottom: 3px solid $t-color--neutro-dark;
     
+    .l-container{
+        padding: 10px 20px;
+        
+        @media SCREEN AND (min-width : 1000px){
+            padding: 0 20px;
+        }
+    }
+    
     // LOGO
     .c-header__logo{
-        margin-top: 8px;
         @extend %l-float--left;
+        
+        @media SCREEN AND (min-width : 1000px){
+            margin-top: 8px;
+        }
     }
     
     .c-header__logo-link{
+        width: 195px;
+        height: 35px;
         @extend %t-icon;
-        width: 265px;
-        height: 40px;
         background-image: url('../img/logo.svg');
+        
+        @media SCREEN AND (min-width : 1000px){
+            width: 265px;
+            height: 40px;
+        }
     }
     
     // MAIN MENU
     .c-header__main-nav{
-        width: calc(100% - 6px - 265px);
+        width: 100%;
         @extend %l-float--left;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        
+        @media SCREEN AND (min-width : 1000px){
+            width: calc(100% - 6px - 265px);
+            position: static;
+        }
     }
     
     .s-header__main-nav-list{
@@ -132,12 +156,16 @@
     }
     
     .c-header__menu-icon{
-        margin-top: 16px;
+        margin-top: 6px;
         cursor: pointer;
         @extend %t-icon;
         width: 6px;
         height: 21px;
         background-image: url('../img/menu-circle.svg');
+        
+        @media SCREEN AND (min-width : 1000px){
+            margin-top: 16px;
+        }
     }
     
     .c-header__secondary-drop{
@@ -145,15 +173,15 @@
         @extend %t-hide;
         overflow: hidden;
         position: absolute;
-        left: -15px;
         top: 0;
+        right: -10px;
         z-index: 2;
         background-color: $t-color--light;
         box-shadow: 0 0 15px 0 $t-color--neutro-dark;
         transition: .2s ease-in-out;
         
         &.js--active{
-            left: 0px;
+            right: 0px;
             visibility: visible;
             opacity: 1;
         }

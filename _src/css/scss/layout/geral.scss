@@ -25,10 +25,15 @@ body{
 }
 
 .l-container{
-    max-width: 1040px;
-    padding: 0 20px;
+    max-width: 760px;
+    padding: 0 10px;
     margin: 0 auto;
     @extend %l-clear;
+    
+    @media SCREEN AND (min-width : 1000px){
+        max-width: 1040px;
+        padding: 0 20px;
+    }
 }
 
 
