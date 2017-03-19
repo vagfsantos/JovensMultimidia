@@ -22,7 +22,7 @@
     //thumbnail sizes
     add_theme_support( 'post-thumbnails' );
     add_image_size( 'banner-main', 720, 420, array( 'center', 'center' ) );
-    add_image_size( 'shelf-main', 240, 165, array( 'center', 'center' ) );
+    add_image_size( 'shelf-main', 340, 265, array( 'center', 'center' ) );
 
 
     // meta tags

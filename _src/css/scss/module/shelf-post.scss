@@ -1,13 +1,21 @@
 .m-post{
     .c-post__image-box{
         margin: 0;
+        text-align: center;
+        
+        @media SCREEN AND (min-width: 1000px){
+            text-align: left;
+        }
     }
     
     .c-post__image{
-        display: block;
         border-width: 2px;
         border-style: solid;
-        transition: .3s ease-in-out;
+        
+        @media SCREEN AND (min-width: 1000px){
+            display: block;
+            transition: .3s ease-in-out;
+        }
         
         &[class*=comportamento]{
             border-color: $t-color--behavior
@@ -40,8 +48,11 @@
         color: $t-color--dark;
         overflow: hidden;
         @extend %t-font--bold, %t-font-face--support;
-        text-align: left;
         max-height: 48px;
+        
+        @media SCREEN AND (min-width: 1000px){
+            text-align: left;
+        }
     }
     
     
@@ -50,8 +61,11 @@
         font-size: em(12);
         color: $t-color--dark;
         overflow: hidden;
-        text-align: left;
         max-height: 65px;
+        
+        @media SCREEN AND (min-width: 1000px){
+            text-align: left;
+        }
     }
     
     &:hover{

@@ -1,5 +1,5 @@
 .m-content-sigle{
-    padding: em(30) em(20);
+    padding: em(30) em(80);
     background-color: $t-color--light;
     @extend %l-clear;
     
@@ -9,8 +9,6 @@
     }
     
     .c-content-sigle__post{
-        width: calc(100% - 220px);
-        float: right;
         @extend %t-basic-format;
     }
     

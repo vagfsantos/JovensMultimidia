@@ -9,7 +9,7 @@
     <section class="l-row">
         <div class="l-container">
             
-            <div class="m-post-box has--ad">
+            <div class="m-post-box">
                 <div class="c-post-box__title-box">
                     <h5 class="c-post-box__title is--audiovisual">Os populares</h5>
                 </div>

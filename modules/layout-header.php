@@ -4,12 +4,14 @@
 		<div class="c-header__logo">
 			<a href="<?= get_home_url()?>" class="c-header__logo-link"><?= get_bloginfo('name') . '-' . get_bloginfo('description')?></a>
 		</div>
-
+        
+        <a href="#" class="c-header__trigger-menu-mobile js--trigger-menu-mobile">Menu</a>
+        
 		<?php wp_nav_menu(
 			array(
 				'theme_location' => 'main',
 				'container' => 'nav',
-				'container_class' => 'c-header__main-nav',
+				'container_class' => 'c-header__main-nav js--main-nav',
 				'menu_class' => 'c-header__main-nav-list s-header__main-nav-list'
 				)
 		); ?>

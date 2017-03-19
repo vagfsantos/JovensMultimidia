@@ -31,94 +31,189 @@
         }
     }
     
+    .c-header__trigger-menu-mobile{
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        display: block;
+        background: $t-color--design;
+        padding: em(12) 0;
+        text-align: center;
+        @extend %t-font--bold, %t-font--upper;
+        color: $t-color--light;
+        text-decoration: none;
+        border-top: 4px solid lighten($t-color--design, 10%);
+        z-index: 1026;
+        font-size: em(16);
+        
+        &.is--active{
+            background-color: $t-color--neutro-dark;
+        }
+        
+        @media SCREEN AND (min-width : 1000px){
+            display: none;
+        }
+    }
+    
     // MAIN MENU
     .c-header__main-nav{
         width: 100%;
         @extend %l-float--left;
         position: fixed;
         left: 0;
-        bottom: 0;
+        bottom: em(46);
+        z-index: 1025;
+        visibility: hidden;
+        
+        &.is--active{
+            visibility: visible;
+            
+            >ul{
+                >.menu-item{
+                    >a{
+                        transform: translateX(0px) !important;
+                        
+                        &[href*=design]{
+                            transition: transform .2s 0s ease-in-out;
+                        }
+
+                        &[href*=programacao]{
+                            transition: transform .2s .1s ease-in-out;
+                        }
+
+                        &[href*=audiovisual]{
+                            transition: transform .2s .3s ease-in-out;
+                        }
+
+                        &[href*=comportamento]{
+                            transition: transform .2s .4s ease-in-out;
+                        }
+
+                        &[href*=jogos]{
+                            transition: transform .2s .2s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
         
         @media SCREEN AND (min-width : 1000px){
             width: calc(100% - 6px - 265px);
             position: static;
+            visibility: visible;
         }
     }
     
     .s-header__main-nav-list{
         list-style: none;
         margin: 0;
-        padding: 0 10px;
-        text-align: right;
+        padding: 0;
+        
+        @media SCREEN AND (min-width : 1000px){
+            padding: 0 10px;
+            text-align: right;
+        }
         
         > .menu-item{
             text-align: center;
-            display: inline-block;
-            margin: 0 -2px;
+            
+            @media SCREEN AND (min-width : 1000px){
+                display: inline-block;
+                margin: 0 -2px;
+            }
             
             > a{
                 font-size: em(15);
                 @extend %t-font--upper;
                 @extend %t-font--bold;
-                @extend %t-font--color-neutro;
                 text-decoration: none;
-                padding: 20px;
+                padding: em(15) 0;
                 display: block;
-                border-bottom-width: 3px;
-                border-bottom-style: solid;
-                border-bottom-color: transparent;
-                margin-bottom: -3px;
-                transition: .2s ease-in;
-                appearance: none;
+                color: $t-color--light;
+                transform: translateX(-100%);
                 
                 &[href*=design]{
-                    border-bottom-color: $t-color--design;
-                    box-shadow: inset 0 0 0 0 $t-color--design;
+                    background-color: $t-color--design;
                 }
-                
-                &[href*=programacao]{
-                    border-bottom-color: $t-color--code;
-                    box-shadow: inset 0 0 0 0 $t-color--code;
-                }
-                
-                &[href*=audiovisual]{
-                    border-bottom-color: $t-color--audiovisual;
-                    box-shadow: inset 0 0 0 0 $t-color--audiovisual;
-                }
-                
-                &[href*=comportamento]{
-                    border-bottom-color: $t-color--behavior;
-                    box-shadow: inset 0 0 0 0 $t-color--behavior;
-                }
-                
-                &[href*=jogos]{
-                    border-bottom-color: $t-color--games;
-                    box-shadow: inset 0 0 0 0 $t-color--games;
-                }
-                
-                &:hover{
-                    color: #fff;
 
+                &[href*=programacao]{
+                    background-color: $t-color--code;
+                }
+
+                &[href*=audiovisual]{
+                    background-color: $t-color--audiovisual;
+                }
+
+                &[href*=comportamento]{
+                    background-color: $t-color--behavior;
+                }
+
+                &[href*=jogos]{
+                    background-color: $t-color--games;
+                }
+                
+                @media SCREEN AND (min-width : 1000px){
+                    background-color: $t-color--light !important;
+                    padding: em(20, 15);
+                    border-bottom-width: 3px;
+                    border-bottom-style: solid;
+                    border-bottom-color: transparent;
+                    margin-bottom: -3px;
+                    appearance: none;
+                    color: $t-color--neutro-dark;
+                    transform: none;
+                    transition: .2s ease-in;
+                    
                     &[href*=design]{
-                        box-shadow: inset 0 100px 0 0 $t-color--design;
+                        border-bottom-color: $t-color--design;
+                        box-shadow: inset 0 0 0 0 $t-color--design;
                     }
 
                     &[href*=programacao]{
-                        box-shadow: inset 0 100px 0 0 $t-color--code;
+                        border-bottom-color: $t-color--code;
+                        box-shadow: inset 0 0 0 0 $t-color--code;
                     }
 
                     &[href*=audiovisual]{
-                        box-shadow: inset 0 100px 0 0 $t-color--audiovisual;
+                        border-bottom-color: $t-color--audiovisual;
+                        box-shadow: inset 0 0 0 0 $t-color--audiovisual;
                     }
 
                     &[href*=comportamento]{
-                        box-shadow: inset 0 100px 0 0 $t-color--behavior;
+                        border-bottom-color: $t-color--behavior;
+                        box-shadow: inset 0 0 0 0 $t-color--behavior;
                     }
 
                     &[href*=jogos]{
-                        box-shadow: inset 0 100px 0 0 $t-color--games;
+                        border-bottom-color: $t-color--games;
+                        box-shadow: inset 0 0 0 0 $t-color--games;
                     }
-                }           
+
+                    &:hover{
+                        color: #fff;
+
+                        &[href*=design]{
+                            box-shadow: inset 0 100px 0 0 $t-color--design;
+                        }
+
+                        &[href*=programacao]{
+                            box-shadow: inset 0 100px 0 0 $t-color--code;
+                        }
+
+                        &[href*=audiovisual]{
+                            box-shadow: inset 0 100px 0 0 $t-color--audiovisual;
+                        }
+
+                        &[href*=comportamento]{
+                            box-shadow: inset 0 100px 0 0 $t-color--behavior;
+                        }
+
+                        &[href*=jogos]{
+                            box-shadow: inset 0 100px 0 0 $t-color--games;
+                        }
+                    }
+                }// end MEDIA
             }
             
             &.current-menu-item{
