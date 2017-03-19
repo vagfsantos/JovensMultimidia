@@ -1,7 +1,10 @@
 .m-content-sigle{
-    padding: em(30) em(80);
     background-color: $t-color--light;
-    @extend %l-clear;
+    padding: em(20);
+    
+    @media SCREEN AND (min-width: 1000px){
+        padding: em(30) em(80);
+    }
     
     .c-content-sigle__side{
         width: 165px;

@@ -2,16 +2,26 @@
     background-color: $t-color--light;
     @extend %l-clear;
     margin: em(15) 0;
-    padding: em(25) em(45);
+    padding: em(20);
+    
+    @media SCREEN AND (min-width: 1000px){
+        padding: em(25) em(45);
+    }
 
     .c-author__img{
-        width: 100px;
-        float: left;
+        @media SCREEN AND (min-width: 1000px){
+            width: 100px;
+            float: left;
+        }
     }
     
     .c-author__about{
-        width: calc(100% - 110px);
-        float: right;
+        margin-top: em(15);
+        @media SCREEN AND (min-width: 1000px){
+            width: calc(100% - 110px);
+            float: right;
+            margin-top: 0;
+        }
     }
     
     .c-author__title{

@@ -7,19 +7,26 @@
 
     
     .c-banner-category__image{
-        width: 68.5%;
-        float: left;
+        @media SCREEN AND (min-width: 1000px){
+            width: 68.5%;
+            float: left;
+        }
     }
     
     .c-banner-category__info-box{
-        width: 31.5%;
-        float: right;
+        @media SCREEN AND (min-width: 1000px){
+            width: 31.5%;
+            float: right;
+        }
     }
     
     .c-banner-category__info-wrapper{
-        position: absolute;
-        bottom: 25px;
-        padding: 0 em(20);
+        padding: em(20);
+        @media SCREEN AND (min-width: 1000px){
+            padding: 0 em(20);
+            position: absolute;
+            bottom: 25px;
+        }
     }
     
     .c-banner-category__title{

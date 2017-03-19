@@ -1,5 +1,9 @@
 .m-comments{
+    padding: em(20) em(10);
     margin-bottom: em(15);
-    padding: em(40);
     background-color: $t-color--light;
+    
+    @media SCREEN AND (min-width: 1000px){
+        padding: em(40);
+    }
 }

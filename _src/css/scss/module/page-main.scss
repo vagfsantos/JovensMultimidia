@@ -15,5 +15,6 @@
         background-color: $t-color--light;
         margin: em(15) 0;
         @extend %l-clear;
+        word-break: break-word;
     }
 }

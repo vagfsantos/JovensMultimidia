@@ -4,13 +4,15 @@
     @extend %l-clear;
     
     .m-post{
-        width: 25%;
-        float: left;
-        padding: 0 10px;
         margin-bottom: 20px;
-        
-        &:nth-child(4n+5){
-            clear: both;
+        @media SCREEN AND (min-width: 1000px){
+            width: 25%;
+            float: left;
+            padding: 0 10px;
+            
+            &:nth-child(4n+5){
+                clear: both;
+            }
         }
     }
 }
